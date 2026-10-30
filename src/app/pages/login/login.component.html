@@ -1,0 +1,25 @@
+<div class="login-container">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="card p-4">
+
+    <h3 class="text-center mb-3">Login</h3>
+
+    <div class="mb-3">
+      <label>Username</label>
+      <input type="text" class="form-control" formControlName="userName">
+    </div>
+
+    <div class="mb-3">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+
+    <div class="text-danger mb-2" *ngIf="error">
+      {{ error }}
+    </div>
+
+    <button class="btn btn-primary w-100" type="submit">
+      Login
+    </button>
+
+  </form>
+</div>

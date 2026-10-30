@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark bg-dark px-3">
+  <div class="d-flex align-items-center gap-3">
+    <a hr="#"><img src="images/school-logo.png" height="40"></a>
+    <button class="btn btn-outline-light" (click)="toggleSidebar()">☰</button>
+  </div>
+
+  <div class="ms-auto d-flex align-items-center gap-4">
+    <div style="color:#dc3545;font-weight:bold">
+      Session expires in: {{ countdown }}
+    </div>
+    <a><i class="bi bi-bell-fill text-white"></i></a>
+    
+
+    <div class="dropdown">
+      <a class="dropdown-toggle text-white" data-bs-toggle="dropdown">
+        <img src="images/user.png" height="32"> {{ userName }}
+      </a>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item">Edit Profile</a></li>
+        <li><hr></li>
+        <li><a class="dropdown-item text-danger" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
